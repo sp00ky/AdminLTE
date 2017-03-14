@@ -1,12 +1,3 @@
-*.DS_Store
-*.log
-*.zip
+node_modules
 .idea
-.sass-cache/
-/nbproject/
-/nbproject/private/
-/node_modules/
-/bower_components/
-ad.js
-TODO
-test.html
+.DS_STORE

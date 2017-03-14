@@ -1,0 +1,26 @@
+<template>
+  <div slot="main-content">
+    <ej-grid e-data-source.two-way="builds" 
+            e-allow-paging=true 
+            e-allow-sorting=true 
+            e-edit-settings.bind="edit" 
+            e-toolbar-settings.bind="toolbar"
+            e-page-settings-page-size=20
+            e-on-end-edit.delegate="afterEdit($event.detail)"
+            e-on-end-add.delegate="afterAdd($event.detail)"
+            e-on-end-delete.delegate="afterDelete($event.detail)"
+            e-on-record-click.delegate="recordClick($event.detail)">
+
+      <ej-column e-field="_id" e-visible="false" e-is-primary-key="true"></ej-column>
+      <ej-column e-field="_rev" e-visible="false"></ej-column>
+      <ej-column e-field="doc_type" e-visible="false"></ej-column>
+      <ej-column e-field="version" e-header-text="Version" e-text-align="left" e-width="170"></ej-column>
+      <ej-column e-field="build_date" e-header-text="Build Date" e-format="{0:MM/dd/yyyy}" e-text-align="left" e-width="85"></ej-column>
+      <ej-column e-field="stories" e-header-text="Stories" e-width="200"></ej-column>
+      <ej-column e-field="spirit" e-header-text="Spirit" e-text-align="left" e-width="60"></ej-column>
+      <ej-column e-field="swem" e-header-text="WEM" e-text-align="left" e-width="60"></ej-column>
+      <ej-column e-field="time_entry_task" e-header-text="BigTime" e-text-align="left"e-width="300"></ej-column>
+      <ej-column e-field="location" e-header-text="Location" e-text-align="left"></ej-column>
+  </ej-grid>
+  </div>
+</template>

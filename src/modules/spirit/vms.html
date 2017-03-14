@@ -1,0 +1,25 @@
+<template>
+
+<div slot="main-content">
+  <h3>SPIRIT VMs</h3>
+    <ej-grid e-data-source.two-way="resources" 
+            e-allow-paging=true 
+            e-allow-sorting=true 
+            e-edit-settings.bind="edit" 
+            e-toolbar-settings.bind="toolbar"
+            e-page-settings-page-size=20
+            e-on-end-edit.delegate="afterEdit($event.detail)"
+            e-on-end-add.delegate="afterAdd($event.detail)"
+            e-on-end-delete.delegate="afterDelete($event.detail)"
+            e-on-record-click.delegate="recordClick($event.detail)">
+
+      <ej-column e-field="_id" e-visible="false" e-is-primary-key="true"></ej-column>
+      <ej-column e-field="_rev" e-visible="false"></ej-column>
+      <ej-column e-field="resource_type_id" e-header-text="Resource Type" e-text-align="left"></ej-column>
+      <ej-column e-field="resource_name" e-header-text="Resource" e-text-align="left"></ej-column>
+      <ej-column e-field="default_url" e-header-text="URL"></ej-column>
+      <ej-column e-field="purpose" e-header-text="Purpose" e-text-align="left"></ej-column>
+      <ej-column e-field="record_status_id" e-header-text="Status" e-text-align="left"></ej-column>
+  </ej-grid>
+</div>
+</template>
