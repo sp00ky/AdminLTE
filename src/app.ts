@@ -1,5 +1,5 @@
 import {Router, RouterConfiguration} from 'aurelia-router';
-//import { AdminLTE } from 'app';
+import * as AdminLTE from 'admin-lte';
 
 export class App {
   public router: Router;
@@ -15,7 +15,6 @@ export class App {
   }
 
     attached(){
-        //$.AdminLTE.layout.fix();
-        alert('attached');
+      $.AdminLTE.layout.fix();
     }
 }

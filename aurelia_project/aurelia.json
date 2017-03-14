@@ -158,7 +158,14 @@
             "name": "pouchdb-find",
             "path": "../node_modules/pouchdb-find/dist",
             "main": "pouchdb.find"
-          }
+          },
+          {
+              "name": "admin-lte",
+              "path": "../node_modules/admin-lte/dist",
+              "main": "js/app.min",
+              "deps": ["jquery"],
+              "exports": "$"
+          }        
         ]
       }
     ]
